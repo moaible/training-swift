@@ -47,4 +47,16 @@ final class TrainingTests: XCTestCase {
         XCTAssertEqual(Quiz007().solve(0), "zero")
         XCTAssertEqual(Quiz007().solve(1), "not zero")
     }
+
+    func testQuiz008() throws {
+        XCTAssertEqual(Quiz008().solve(0), "")
+        XCTAssertEqual(Quiz008().solve(-1), "")
+        XCTAssertEqual(Quiz008().solve(1), "positive")
+    }
+
+    func testQuiz009() throws {
+        XCTAssertEqual(Quiz009().solve(0), "zero")
+        XCTAssertEqual(Quiz009().solve(-1), "negative")
+        XCTAssertEqual(Quiz009().solve(1), "positive")
+    }
 }

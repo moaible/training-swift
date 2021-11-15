@@ -226,3 +226,84 @@ public class Quiz007: TrainingItemConvertible {
         return answer
     }
 }
+
+public class Quiz008: TrainingItemConvertible {
+
+    public var question: String {
+        """
+        ---
+        整数値を入力させ、値が正であればpositiveと表示するプログラムを作成せよ。ただし0は正には含まない。
+        【実行例、下線部は入力例】
+        input number: 1
+        positive
+        input number: -1
+        input number: 0
+        ---
+        """
+    }
+
+    public typealias Input = Int
+    public typealias Output = String
+
+    public func solve(_ input: Input) -> Output {
+        print(question)
+        var answer = ""
+        if input > 0 {
+            answer = "positive"
+        }
+        print(answer)
+        return answer
+    }
+}
+
+public class Quiz009: TrainingItemConvertible {
+
+    enum Result {
+        case positive
+        case negative
+        case zero
+
+        func identifier() -> String {
+            switch self {
+            case .positive:
+                return "positive"
+            case .negative:
+                return "negative"
+            case .zero:
+                return "zero"
+            }
+        }
+    }
+
+    public var question: String {
+        """
+        ---
+        整数値を入力させ、値が正であればpositive、負であればnegative、0であればzeroと表示するプログラムを作成せよ。
+        【実行例、下線部は入力例】
+        input number: 1
+        positive
+        input number: -1
+        negative
+        input number: 0
+        zero
+        ---
+        """
+    }
+
+    public typealias Input = Int
+    public typealias Output = String
+
+    public func solve(_ input: Input) -> Output {
+        print(question)
+        let answer: Result
+        if input == 0 {
+            answer = .zero
+        } else if (input > 0) {
+            answer = .positive
+        } else {
+            answer = .negative
+        }
+        print(answer)
+        return answer.identifier()
+    }
+}
