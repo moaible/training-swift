@@ -113,4 +113,13 @@ final class TrainingTests: XCTestCase {
         0
         """)
     }
+
+    func testQuiz015() throws {
+        XCTAssertEqual(Quiz015().solve(7), """
+        0
+        2
+        4
+        6
+        """)
+    }
 }

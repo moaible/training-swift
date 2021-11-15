@@ -463,3 +463,32 @@ public class Quiz014: TrainingItemConvertible {
         return answer
     }
 }
+
+public class Quiz015: TrainingItemConvertible {
+    
+    public var question: String {
+        """
+        ---
+        整数値を入力させ、0から入力値を超えない値まで2ずつ増やして表示するプログラムを作成せよ。
+        【実行例、下線部は入力例】
+        input number: 7
+        0
+        2
+        4
+        6
+        ---
+        """
+    }
+
+    public typealias Input = Int
+    public typealias Output = String
+
+    public func solve(_ input: Input) -> Output {
+        print(question)
+        let answer = (0 ... input / 2)
+            .map { idx in String(idx * 2) }
+            .joined(separator: "\n")
+        print(answer)
+        return answer
+    }
+}
