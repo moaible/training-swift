@@ -333,3 +333,37 @@ public class Quiz010: TrainingItemConvertible {
         return answer
     }
 }
+
+public class Quiz011: TrainingItemConvertible {
+
+    public var question: String {
+        """
+        ---
+        Hello World!を10回繰り返して表示するプログラムを作成せよ。
+        【実行例、下線部は入力例】
+        Hello World!
+        Hello World!
+        Hello World!
+        Hello World!
+        Hello World!
+        Hello World!
+        Hello World!
+        Hello World!
+        Hello World!
+        Hello World!
+        ---
+        """
+    }
+
+    public typealias Input = Int
+    public typealias Output = String
+
+    public func solve(_ input: Input) -> Output {
+        print(question)
+        let answer = (0 ..< input)
+            .map { _ in "Hello, World!" }
+            .joined(separator: "\n")
+        print(answer)
+        return answer
+    }
+}
