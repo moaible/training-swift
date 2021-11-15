@@ -66,10 +66,22 @@ final class TrainingTests: XCTestCase {
     }
 
     func testQuiz011() throws {
-        XCTAssertEqual(Quiz011().solve(10), """
+        XCTAssertEqual(Quiz011().solve(()), """
         Hello World!
         Hello World!
         Hello World!
+        Hello World!
+        Hello World!
+        Hello World!
+        Hello World!
+        Hello World!
+        Hello World!
+        Hello World!
+        """)
+    }
+
+    func testQuiz012() throws {
+        XCTAssertEqual(Quiz012().solve(7), """
         Hello World!
         Hello World!
         Hello World!

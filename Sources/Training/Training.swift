@@ -355,13 +355,45 @@ public class Quiz011: TrainingItemConvertible {
         """
     }
 
+    public typealias Input = Void
+    public typealias Output = String
+
+    public func solve(_ input: Input) -> Output {
+        print(question)
+        let answer = (0 ..< 10)
+            .map { _ in "Hello World!" }
+            .joined(separator: "\n")
+        print(answer)
+        return answer
+    }
+}
+
+public class Quiz012: TrainingItemConvertible {
+
+    public var question: String {
+        """
+        ---
+        整数値を入力させ、その値の回数だけHello World!を繰り返して表示するプログラムを作成せよ。
+        【実行例、下線部は入力例】
+        input number: 7
+        Hello World!
+        Hello World!
+        Hello World!
+        Hello World!
+        Hello World!
+        Hello World!
+        Hello World!
+        ---
+        """
+    }
+
     public typealias Input = Int
     public typealias Output = String
 
     public func solve(_ input: Input) -> Output {
         print(question)
         let answer = (0 ..< input)
-            .map { _ in "Hello, World!" }
+            .map { _ in "Hello World!" }
             .joined(separator: "\n")
         print(answer)
         return answer
