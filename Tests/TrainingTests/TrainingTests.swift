@@ -91,4 +91,26 @@ final class TrainingTests: XCTestCase {
         Hello World!
         """)
     }
+
+    func testQuiz013() throws {
+        XCTAssertEqual(Quiz013().solve(5), """
+        0
+        1
+        2
+        3
+        4
+        5
+        """)
+    }
+
+    func testQuiz014() throws {
+        XCTAssertEqual(Quiz014().solve(5), """
+        5
+        4
+        3
+        2
+        1
+        0
+        """)
+    }
 }

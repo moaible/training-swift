@@ -399,3 +399,67 @@ public class Quiz012: TrainingItemConvertible {
         return answer
     }
 }
+
+public class Quiz013: TrainingItemConvertible {
+    
+    public var question: String {
+        """
+        ---
+        整数値を入力させ、0から入力値まで数を1ずつ増やして表示するプログラムを作成せよ。
+
+        【実行例、下線部は入力例】
+        input number: 5
+        0
+        1
+        2
+        3
+        4
+        5
+        ---
+        """
+    }
+
+    public typealias Input = Int
+    public typealias Output = String
+
+    public func solve(_ input: Input) -> Output {
+        print(question)
+        let answer = (0 ... input)
+            .map { idx in String(idx) }
+            .joined(separator: "\n")
+        print(answer)
+        return answer
+    }
+}
+
+public class Quiz014: TrainingItemConvertible {
+    
+    public var question: String {
+        """
+        ---
+        整数値を入力させ、入力値から0まで数を1ずつ減らして表示するプログラムを作成せよ。
+        【実行例、下線部は入力例】
+        input number: 5
+        5
+        4
+        3
+        2
+        1
+        0
+        ---
+        """
+    }
+
+    public typealias Input = Int
+    public typealias Output = String
+
+    public func solve(_ input: Input) -> Output {
+        print(question)
+        let answer = (0 ... input)
+            .reversed()
+            .map { idx in String(idx) }
+            .joined(separator: "\n")
+        print(answer)
+        return answer
+    }
+}
