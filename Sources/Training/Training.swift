@@ -492,3 +492,49 @@ public class Quiz015: TrainingItemConvertible {
         return answer
     }
 }
+
+public class Quiz016: TrainingItemConvertible {
+    
+    public var question: String {
+        """
+        ---
+        整数値を入力させ、入力値が0でなければ再度入力させ、0であれば終了するプログラムを作成せよ。
+        【実行例、下線部は入力例】
+        input number: 5
+        input number: 3
+        input number: -4
+        input number: 0
+        ---
+        """
+    }
+
+    public typealias Input = [Int]
+    public typealias Output = [String]
+
+    func untilElement<Element: Equatable>(
+        _ array: Array<Element>, 
+        atEnd endElement: Element,
+        sum: Array<Element> = Array<Element>()) -> Array<Element>
+    {
+        if array.isEmpty {
+            return []
+        }
+        guard sum.last == endElement else {
+            return untilElement(
+                Array(array.dropFirst()), 
+                atEnd: endElement,
+                sum: sum + [array.first!])
+        }
+        return sum
+    }
+
+    public func solve(_ input: Input) -> Output {
+        print(question)
+        let end = 0
+        let answer = untilElement(input, atEnd: end).map {
+            $0 == end ? "end" : "continued"
+        }
+        print(answer)
+        return answer
+    }
+}

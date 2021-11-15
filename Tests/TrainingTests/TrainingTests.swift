@@ -122,4 +122,12 @@ final class TrainingTests: XCTestCase {
         6
         """)
     }
+
+    func testQuiz016() throws {
+        XCTAssertEqual(
+            Quiz016().solve([]), [])
+        XCTAssertEqual(
+            Quiz016().solve([5, 3, -4, 0, 1, 2, 3]),
+            ["continued", "continued", "continued", "end"])
+    }
 }
