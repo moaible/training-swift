@@ -286,3 +286,36 @@ public class Quiz016: TrainingItemConvertible {
         return answer
     }
 }
+
+public class Quiz017: TrainingItemConvertible {
+
+    public typealias Input = Void
+    public typealias Output = [Int]
+
+    public func solve(_ input: Input) -> Output {
+        let answer = Array((0 ..< 10))
+        return answer
+    }
+}
+
+public class Quiz018: TrainingItemConvertible {
+
+    public typealias Input = Int
+    public typealias Output = [Int]
+
+    public func solve(_ input: Input) -> Output {
+        let answer = (0 ..< 10).map { _ in input }
+        return answer
+    }
+}
+
+public class Quiz019: TrainingItemConvertible {
+
+    public typealias Input = [Int]
+    public typealias Output = [Int]
+
+    public func solve(_ input: Input) -> Output {
+        let answer = Array(input.prefix(5))
+        return answer
+    }
+}

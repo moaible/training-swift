@@ -281,4 +281,65 @@ final class TrainingTests: XCTestCase {
             Quiz016().solve([5, 3, -4, 0, 1, 2, 3]),
             ["continued", "continued", "continued", "end"])
     }
+
+    func testQuiz017() throws {
+        print("""
+        要素数10の整数型の配列を宣言し、i番目の要素の初期値をiとし、順に値を表示するプログラムを作成せよ。
+        【実行例、下線部は入力例】
+        0
+        1
+        2
+        3
+        4
+        5
+        6
+        7
+        8
+        9
+        """)
+        XCTAssertEqual(
+            Quiz017().solve(()),
+            [0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+    }
+
+    func testQuiz018() throws {
+        print("""
+        要素数10の整数型の配列を宣言し、整数値を入力させ、すべての配列の要素を入力値として、すべての要素の値を表示するプログラムを作成せよ。
+        【実行例、下線部は入力例】
+        input number: 6
+        6
+        6
+        6
+        6
+        6
+        6
+        6
+        6
+        6
+        6
+        """)
+        XCTAssertEqual(
+            Quiz018().solve(6),
+            [6, 6, 6, 6, 6, 6, 6, 6, 6, 6])
+    }
+
+    func testQuiz019() throws {
+        print("""
+        要素数5の整数型の配列を宣言し、すべての配列に対して順に入力された整数値を代入し、すべての要素の値を表示するプログラムを作成せよ。
+        【実行例、下線部は入力例】
+        input number: 4
+        input number: 6
+        input number: 7
+        input number: 3
+        input number: 1
+        4
+        6
+        7
+        3
+        1
+        """)
+        XCTAssertEqual(
+            Quiz019().solve([4, 6, 7, 3, 1, 2, 3, 4]),
+            [4, 6, 7, 3, 1])
+    }
 }
