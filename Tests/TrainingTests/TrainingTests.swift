@@ -38,13 +38,13 @@ final class TrainingTests: XCTestCase {
         """)
     }
 
-        func testQuiz006() throws {
-            XCTAssertEqual(Quiz006().solve(0), "zero")
-            XCTAssertEqual(Quiz006().solve(1), "")
-        }
+    func testQuiz006() throws {
+        XCTAssertEqual(Quiz006().solve(0), "zero")
+        XCTAssertEqual(Quiz006().solve(1), "")
+    }
 
-        func testQuiz007() throws {
-            XCTAssertEqual(Quiz007().solve(0), "zero")
-            XCTAssertEqual(Quiz007().solve(1), "not zero")
-        }
+    func testQuiz007() throws {
+        XCTAssertEqual(Quiz007().solve(0), "zero")
+        XCTAssertEqual(Quiz007().solve(1), "not zero")
+    }
 }
