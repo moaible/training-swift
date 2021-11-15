@@ -59,4 +59,9 @@ final class TrainingTests: XCTestCase {
         XCTAssertEqual(Quiz009().solve(-1), "negative")
         XCTAssertEqual(Quiz009().solve(1), "positive")
     }
+
+    func testQuiz010() throws {
+        XCTAssertEqual(Quiz010().solve(1), "absolute value is 1")
+        XCTAssertEqual(Quiz010().solve(-2), "absolute value is 2")
+    }
 }
